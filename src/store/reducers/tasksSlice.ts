@@ -42,9 +42,35 @@ const TasksSlice = createSlice({
         fetchingTasksError(state, action: PayloadAction<Error>) {
             state.loading = false
             state.error = action.payload.message
+        },
+        editingTask(state, action: PayloadAction<{id: string, value: string}>) {
+            state.tasks = state.tasks.map(task => task.id === action.payload.id ? {...task, title: action.payload.value} : task)
+        },
+        completingTask(state, action: PayloadAction<string>) {
+            state.tasks = state.tasks.map(task => task.id === action.payload ? {...task, completed: true} : task)
+        },
+        deletingTask(state, action: PayloadAction<string>) {
+            state.tasks = state.tasks.filter(task => task.id !== action.payload)
+        },
+        addingTask(state, action: PayloadAction<string>) {
+            const newTask = {
+                userId: "1",
+                id: `${Date.now()}`,
+                title: action.payload,
+                completed: false
+            }
+            state.tasks.push(newTask)
         }
     }
 })
 
 export default TasksSlice.reducer
-export const {fetchingTasks, fetchingTasksSuccess, fetchingTasksError} = TasksSlice.actions
+export const {
+    fetchingTasks,
+    fetchingTasksSuccess,
+    fetchingTasksError,
+    editingTask,
+    completingTask,
+    deletingTask,
+    addingTask
+} = TasksSlice.actions
