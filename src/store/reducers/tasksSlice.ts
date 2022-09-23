@@ -8,20 +8,7 @@ interface TasksState {
 }
 
 const initialState: TasksState = {
-    tasks: [
-        {
-            id: "1",
-            userId: "1",
-            title: "Upload the repo",
-            completed: false
-        },
-        {
-            id: "2",
-            userId: "1",
-            title: "Update github",
-            completed: false
-        }
-    ],
+    tasks: [],
     loading: false,
     error: ""
 }
@@ -52,14 +39,14 @@ const TasksSlice = createSlice({
         deletingTask(state, action: PayloadAction<string>) {
             state.tasks = state.tasks.filter(task => task.id !== action.payload)
         },
-        addingTask(state, action: PayloadAction<string>) {
+        addingTask(state, action: PayloadAction<{ id: string, title: string }>) {
             const newTask = {
                 userId: "1",
-                id: `${Date.now()}`,
-                title: action.payload,
-                completed: false
+                title: action.payload.title,
+                completed: false,
+                id: action.payload.id
             }
-            state.tasks.push(newTask)
+            state.tasks.push(newTask as ITask)
         }
     }
 })

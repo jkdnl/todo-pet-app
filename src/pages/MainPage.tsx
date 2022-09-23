@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import TableWrapper from "../components/TableWrapper";
 import TasksHeader from "../components/TasksHeader";
 import TaskCard from "../components/TaskCard";
-import {useAppSelector} from "../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {fetchTasks} from "../store/actions/tasksActions";
 
 const MainPage: React.FC = () => {
 
+    const dispatch = useAppDispatch()
     const {tasks} = useAppSelector(state => state.tasksReducer)
+    useEffect(() => {
+        dispatch(fetchTasks())
+    }, [])
+
     const noTasks = tasks.length === 0
 
     return (

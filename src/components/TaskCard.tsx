@@ -33,7 +33,7 @@ const TaskCard: React.FC<CardProps> = ({task}) => {
                             className="outline-0 w-full"
                             onChange={(e) => setValue(e.target.value)}
                         />
-                        <button className="hover:text-green-600 hover:bg-white rounded p-1">
+                        <button className="hover:text-green-600 p-1">
                             <CheckIcon className="w-5"/>
                         </button>
                     </form>
@@ -44,11 +44,11 @@ const TaskCard: React.FC<CardProps> = ({task}) => {
                             {!task.completed &&
                                 <>
                                     <button onClick={() => dispatch(completeTask(task.id))}
-                                         className="hover:text-green-600 hover:bg-white rounded p-1">
+                                         className="hover:text-green-600 p-1">
                                         <CheckIcon className="w-5"/>
                                     </button>
                                     <button onClick={() => setEditing(true)}
-                                        className="hover:text-amber-400 hover:bg-white rounded p-1">
+                                        className="hover:text-amber-400 p-1">
                                         <PencilIcon className="w-5"/>
                                     </button>
                                 </>
