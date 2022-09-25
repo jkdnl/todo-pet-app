@@ -2,12 +2,14 @@
 
 ## Stack
 
-1) Redux
-2) React-router-dom
-3) JSON-server
-4) Hooks
-5) TypeScript
-6) Tailwind
+1) React
+2) Redux
+3) React-router-dom
+4) JSON-server
+5) Hooks
+6) TypeScript
+7) Tailwind
+8) Axios
 
 ## Installation
 
