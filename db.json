@@ -4,19 +4,25 @@
       "id": "2",
       "userId": "1",
       "title": "Update github",
-      "completed": false
-    },
-    {
-      "userId": "2",
-      "title": "Make auth",
-      "completed": true,
-      "id": "2022-09-23T14:42:07.339Z"
+      "completed": true
     },
     {
       "userId": "1",
-      "title": "Improve design",
+      "title": "Test editing, works",
       "completed": true,
-      "id": "2022-09-23T14:42:10.931Z"
+      "id": "2022-09-25T11:39:19.070Z"
+    },
+    {
+      "userId": "1",
+      "title": "Check auth",
+      "completed": false,
+      "id": "2022-09-25T11:46:16.947Z"
+    },
+    {
+      "userId": "2",
+      "title": "Check auth",
+      "completed": false,
+      "id": "2022-09-25T11:46:49.141Z"
     }
   ],
   "users": [
@@ -29,11 +35,6 @@
       "id": "2",
       "email": "test2@test.ru",
       "password": "test"
-    },
-    {
-      "email": "ghjr@sdla",
-      "password": "ujla",
-      "id": "Ca0Vh26"
     }
   ]
 }

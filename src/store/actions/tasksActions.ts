@@ -59,7 +59,7 @@ export const addTask = (title: string) => async (dispatch: AppDispatch) => {
     try {
         const id = new Date().toISOString()
         await axios.post(`http://localhost:3000/tasks`, {
-            userId: "1",
+            userId: localStorage.getItem("currentUser"),
             title: title,
             completed: false,
             id: id

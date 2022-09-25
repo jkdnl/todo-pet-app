@@ -2,8 +2,8 @@
 
 ## Stack
 
-1) React-router-dom
-2) Redux
+1) Redux
+2) React-router-dom
 3) JSON-server
 4) Hooks
 5) TypeScript
@@ -23,6 +23,11 @@ Agree to run the server on different port
 `For instance`
 
 * Email: test@test.ru
+* Password: test
+
+or
+
+* Email: test2@test.ru
 * Password: test
 
 ### Description
