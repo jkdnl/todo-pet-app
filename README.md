@@ -6,7 +6,8 @@
 2) Redux
 3) JSON-server
 4) Hooks
-5) Tailwind
+5) TypeScript
+6) Tailwind
 
 ## Installation
 
@@ -31,3 +32,4 @@ delete and change the completeness status of tasks available
 for the user
 * Authentication is made through JSON-server and local storage,
 JSON-tokens are not implemented
+* Tasks and users are typed
