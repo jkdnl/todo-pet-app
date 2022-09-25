@@ -7,16 +7,33 @@
       "completed": false
     },
     {
-      "userId": "1",
+      "userId": "2",
       "title": "Make auth",
-      "completed": false,
+      "completed": true,
       "id": "2022-09-23T14:42:07.339Z"
     },
     {
       "userId": "1",
       "title": "Improve design",
-      "completed": false,
+      "completed": true,
       "id": "2022-09-23T14:42:10.931Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "test@test.ru",
+      "password": "test"
+    },
+    {
+      "id": "2",
+      "email": "test2@test.ru",
+      "password": "test"
+    },
+    {
+      "email": "ghjr@sdla",
+      "password": "ujla",
+      "id": "Ca0Vh26"
     }
   ]
 }

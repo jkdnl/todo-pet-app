@@ -4,6 +4,7 @@ import TasksHeader from "../components/TasksHeader";
 import TaskCard from "../components/TaskCard";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {fetchTasks} from "../store/actions/tasksActions";
+import {useNavigate} from "react-router-dom";
 
 const MainPage: React.FC = () => {
 
@@ -11,6 +12,13 @@ const MainPage: React.FC = () => {
     const {tasks} = useAppSelector(state => state.tasksReducer)
     useEffect(() => {
         dispatch(fetchTasks())
+    }, [])
+
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (!localStorage.getItem("currentUser")) {
+            navigate("/auth/login")
+        }
     }, [])
 
     const noTasks = tasks.length === 0

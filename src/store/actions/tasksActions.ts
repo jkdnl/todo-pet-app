@@ -13,7 +13,11 @@ import {ITask} from "../../models/ITask";
 export const fetchTasks = () => async (dispatch: AppDispatch) => {
     try {
         dispatch(fetchingTasks())
-        const {data} = await axios.get<ITask[]>("http://localhost:3000/tasks")
+        const {data} = await axios.get<ITask[]>("http://localhost:3000/tasks", {
+            params: {
+                userId: localStorage.getItem("currentUser")
+            }
+        })
         dispatch(fetchingTasksSuccess(data))
     } catch (e) {
         dispatch(fetchingTasksError(e as Error))
